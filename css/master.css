@@ -28,6 +28,7 @@ html {
   font-weight: 400;
   margin: 0;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .product-gallery {
@@ -60,17 +61,18 @@ html {
 .product-info_price {
   margin: 0;
   font-size: 1rem;
-  line-height: 0.9;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .product-info_article {
   font-size: 0.75rem;
+  line-height: 1.35;
 }
 
 .product-info_color-name {
   font-size: 0.75rem;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .product-color-list {
@@ -85,6 +87,7 @@ html {
 .product-color-list_item {
   margin: 0;
   margin-right: 1rem;
+  display: flex;
 }
 
 li:last-child .product-color-list_color{
@@ -96,6 +99,8 @@ li:last-child .product-color-list_color{
   height: 40px;
   border-radius: 50%;
   border: solid 1px #000000;
+  color: transparent;
+  font-size: 0;
 }
 
 .product-color-list_color.black {
@@ -179,44 +184,53 @@ li:last-child .product-color-list_color{
   display: flex;
   justify-content: space-between;
   padding: 2rem 1rem;
-}
-
-.product-desc-item_title-text {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1.25;
+  position: relative;
 }
 
-.arrow {
+.product-desc-item_title:after {
+  content: '';
   background: #fff url("../icons/triangle.svg") no-repeat center;
   width: 10px;
   height: 20px;
+  top: 2rem;
+  right: 1rem;
 }
 
-.arrow.close {
+.product-desc-item.close .product-desc-item_title:after {
   transform: rotate(180deg);
 }
 
 .product-desc-item_txt {
-  font-family: 'Lora', 'Arial', serif;
-  line-height: 1.71;
-  font-size: 0.875rem;
   text-align: left;
-  margin: 0;
   padding: 0 1rem 2rem;
 }
 
 .product-desc-item_txt p {
-  margin: 0;
-  line-height: 1.78;
+  font-family: 'Lora', 'Arial', serif;
+  line-height: 1.77;
+  font-size: 0.875rem;
+  text-align: left;
+  margin: 0 0 1.5rem;
+  color: #171717;
 }
 
+.product-desc-item_txt p:nth-child(2) {
+  margin-bottom: 0;
+}
 .product-desc-item_txt ul {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 1.75;
+  font-size: 0.875rem;
+}
+
+.product-desc-item_txt ul li {
+  font-family: 'Lora', 'Arial', serif;
 }
 
 .recommend {
@@ -227,7 +241,7 @@ li:last-child .product-color-list_color{
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.19;
+  line-height: 1.15;
   text-align: left;
   color: #171717;
   margin: 0;
