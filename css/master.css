@@ -1,5 +1,5 @@
 html {
-  fon-size: 16px;
+  font-size: 16px;
 }
 
 .body {
@@ -15,7 +15,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff url("../image/logo.svg") no-repeat center;
   border-bottom: solid 1px #c6c6c6;
   padding: 1rem 0;
 }
@@ -221,6 +220,7 @@ li:last-child .product-color-list_color{
 .product-desc-item_txt p:nth-child(2) {
   margin-bottom: 0;
 }
+
 .product-desc-item_txt ul {
   margin: 0;
   padding: 0;
@@ -300,7 +300,8 @@ li:last-child .product-color-list_color{
   font-size: 0.75rem;
   line-height: 1.2;
   text-align: left;
-   color: #999999;
+  color: #999999;
+  margin-left: 1px;
 }
 
 .more_title {
