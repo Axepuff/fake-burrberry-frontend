@@ -194,7 +194,7 @@ html {
   line-height: 1.77;
   font-size: 0.875rem;
   text-align: left;
-  margin: 0 0 1.5rem;
+  margin: 0;
   color: #171717;
 }
 
@@ -204,6 +204,7 @@ html {
   list-style: none;
   line-height: 1.75;
   font-size: 0.875rem;
+  padding-top: 0.4rem;
 }
 
 .product-desc__item-txt ul li {
