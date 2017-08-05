@@ -8,6 +8,9 @@ html {
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
 }
 
+.product {
+  margin: 0 -0.5rem;
+}
 
 .logo {
   display: flex;
@@ -22,7 +25,7 @@ html {
     padding: 1.5rem 0;
   }
   .product {
-    padding: 0 0.5rem;
+    margin: 0;
   }
 }
 
@@ -186,12 +189,13 @@ html {
   padding: 0;
   background: transparent;
   border: 0;
-  border-bottom: solid 1px #c6c6c6;;
+  border-bottom: solid 1px #c6c6c6;
 }
 
 @media screen and (min-width: 48rem) {
   .product-desc__btn {
     display: none;
+    border-bottom: 0;
   }
 
   .product-desc__btn:first-child {
@@ -241,7 +245,7 @@ html {
 
 @media screen and (min-width: 48rem) {
   .product-desc__btn-txt {
-    padding: 0 0 2rem;
+    padding: 0 0 1.5rem;
   }
 }
 
@@ -273,6 +277,7 @@ html {
 
 .delivery-img {
   width: 100%;
+  vertical-align: top;
 }
 
 @media screen and (min-width: 48rem) {
@@ -286,6 +291,7 @@ html {
   font-size: 1rem;
   line-height: 1.35;
   color: #171717;
+  margin: 0;
   margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -311,15 +317,26 @@ html {
   color: #171717;
   margin: 0;
   margin-bottom: 0.25rem;
+  line-height: 1.15;
+}
+
+.delivery-feauture__title {
 }
 
 .delivery-feauture__text {
+  line-height: 1.35;
   margin: 0;
   font-weight: 400;
 }
 
 .recommend {
   padding: 3rem 1rem 4rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend {
+    padding: 1.5rem 0 4rem;
+  }
 }
 
 .recommend-title {
@@ -335,6 +352,12 @@ html {
   display: inline-block;
 }
 
+/*@media screen and (min-width: 48rem) {
+  .recommend-title {
+    line-height: 1.45;
+  }
+}*/
+
 .recommend-list {
   padding: 1.5rem 0 3rem 0;
   display: flex;
@@ -342,6 +365,12 @@ html {
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: -2rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend-list {
+    padding: 1rem 0 0;
+  }
 }
 
 .recommend-list__card {
@@ -393,6 +422,15 @@ html {
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
 }
 
+@media screen and (min-width: 48rem) {
+  .recommend-list__card-price {
+    margin-left: 0;
+  }
+  .more {
+    display: none;
+  }
+}
+
 .more__title {
   font-size: 1rem;
   font-weight: 500;
@@ -442,6 +480,12 @@ html {
   background-color: #f3f3f3;
 }
 
+@media screen and (min-width: 48rem) {
+    .footer {
+    padding: 2rem 0 2rem;
+  }
+}
+
 .footer__btn {
   display: block;
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
@@ -453,6 +497,14 @@ html {
   background: transparent;
   margin-bottom: 1rem;
   padding: 0;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer__btn {
+    line-height: 1.35;
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
 }
 
 .footer__help-title {
@@ -477,11 +529,18 @@ html {
 }
 
 .footer-links {
+  font-size: 0;
+}
+
+.footer-links-title,
+.footer-links-link {
   display: none;
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-links {
+
+  .footer-links-title,
+  .footer-links-link {
     display: block;
   }
   .footer__help-title {
@@ -490,4 +549,29 @@ html {
   .footer__help-link {
     display: none;
   }
+}
+
+.footer-links-title {
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #171717;
+  line-height: 1.15;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-links-link {
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #999999;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links-link:last-child {
+  margin-bottom: 2rem;
 }
