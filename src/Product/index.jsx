@@ -1,13 +1,15 @@
 import React from "react";
-import Title from "./Title";
-import Gallery from "./Gallery";
 import Row from "../common/Row";
 import Col from "../common/Col";
 import Line from "../common/Line";
+import Container from "../common/Container";
+import Title from "./Title";
+import Gallery from "./Gallery";
+import Delivery from "./Delivery";
+import More from "./More";
 import ButtonBlock from "../Product/ButtonBlock";
 import Description from "../Product/Description";
 import Info from "../Product/Info/Info";
-import Container from "../common/Container";
 
 export default () => {
   return (
@@ -15,20 +17,24 @@ export default () => {
       <Container>
         <Title />
         <Row>
-          <Col screen="xs" width="12" screen="md" width="7">
+          <Col xs="12" md="7">
             <Gallery />
           </Col>
-          <Col screen="xs" width="12" screen="md" width="5">
+          <Col xs="12" md="5">
             <Info />
             <ButtonBlock />
           </Col>
         </Row>
         <Line />
         <Row>
-          <Col screen="xs" width="12" screen="md" width="12">
+          <Col xs="12" md="12">
             <Description />
           </Col>
+          <Col md="12">
+            <Delivery />
+          </Col>
         </Row>
+        <More />
       </Container>
     </main>
   );
