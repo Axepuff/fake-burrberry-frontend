@@ -248,7 +248,7 @@ html {
 
 .product-desc__btn-title:after {
   content: '';
-  background: #fff url("../icons/triangle.svg") no-repeat center;
+  background: #fff url("assets/icons/triangle.svg") no-repeat center;
   width: 10px;
   height: 20px;
   top: 2rem;
