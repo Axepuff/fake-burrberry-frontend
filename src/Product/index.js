@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Row from "../common/Row";
 import Col from "../common/Col";
 import Line from "../common/Line";
@@ -6,14 +7,22 @@ import Container from "../common/Container";
 import Title from "./Title";
 import Gallery from "./Gallery";
 import Delivery from "./Delivery";
-import More from "./More";
-import ButtonBlock from "../Product/ButtonBlock";
-import Description from "../Product/Description";
-import Info from "../Product/Info/Info";
+import Recommend from "./Recommend";
+import ButtonBlock from "./ButtonBlock";
+import Description from "./Description/index.js";
+import Info from "./Info";
+
+const Product = styled.main`
+  @media screen and (min-width: 48rem) {
+    .product {
+      margin: 0;
+    }
+  }
+`;
 
 export default () => {
   return (
-    <main className="product">
+    <Product>
       <Container>
         <Title />
         <Row>
@@ -34,8 +43,8 @@ export default () => {
             <Delivery />
           </Col>
         </Row>
-        <More />
+        <Recommend />
       </Container>
-    </main>
+    </Product>
   );
 };
