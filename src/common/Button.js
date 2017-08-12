@@ -16,9 +16,13 @@ const Button = styled.button`
   width: 100%;
   padding: 1rem 0;
   line-height: 1.2;
-  background: ${props => (props.primary ? "#171717" : "#fff")};
+  background: ${props => (props.primary ? "#171717" : "transparent")};
   border: solid 1px ${props => (props.primary ? "#171717" : "#999")};
   color: ${props => (props.primary ? "#fff" : "#171717")};
+
+  @media screen and (min-width: 62rem) {
+    border: solid 1px ${props => (props.primary ? "#171717" : "#000")};
+  }
 `;
 
 export default Button;

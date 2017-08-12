@@ -8,6 +8,12 @@ import Help from "../common/Help";
 const Footer = styled.footer`
   padding: 2rem 0.5rem 2rem;
   background-color: #f3f3f3;
+  @media screen and (min-width: 48rem) {
+    padding: 2rem 0.5rem 2rem;
+  }
+  @media screen and (min-width: 62rem) {
+    padding: 4rem 0.5rem 4rem;
+  }
 `;
 
 const Wrapper = styled.div`font-size: 0;`;
@@ -27,6 +33,9 @@ const Button = styled.button`
     line-height: 1.35;
     display: inline-block;
     margin-right: 1.5rem;
+  }
+  @media screen and (min-width: 62rem) {
+    margin-top: 1.5rem;
   }
 `;
 

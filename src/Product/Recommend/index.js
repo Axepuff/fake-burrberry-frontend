@@ -22,6 +22,9 @@ const Wrapper = styled.div`
   @media screen and (min-width: 48rem) {
     padding: 1rem 0 0;
   }
+  @media screen and (min-width: 62rem) {
+    padding: 1.5rem 0 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -35,6 +38,11 @@ const Title = styled.h2`
   padding-bottom: 0.5rem;
   border-bottom: solid 1px #171717;
   display: inline-block;
+  @media screen and (min-width: 62rem) {
+    text-align: center;
+    border: 0;
+    width: 100%;
+  }
 `;
 
 export default () => {

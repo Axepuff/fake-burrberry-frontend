@@ -26,6 +26,9 @@ const Img = styled.img`
     max-height: none;
     max-width: none;
   }
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const Title = styled.span`
@@ -35,6 +38,11 @@ const Title = styled.span`
   text-align: left;
   color: #171717;
   margin-bottom: 0.5rem;
+  @media screen and (min-width: 62rem) {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.65;
+  }
 `;
 
 const Price = styled.span`
@@ -46,6 +54,9 @@ const Price = styled.span`
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   @media screen and (min-width: 48rem) {
     margin-left: 0;
+  }
+  @media screen and (min-width: 62rem) {
+    line-height: 1.7;
   }
 `;
 

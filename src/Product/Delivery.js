@@ -51,39 +51,47 @@ const FeatureText = Text.extend`
   font-weight: 400;
 `;
 
+const Wrapper = styled.div`
+  @media screen and (min-width: 62rem) {
+    padding: 4rem 0 5.125rem 5.125rem;
+  }
+`;
+
 export default () => {
   return (
     <Delivery>
       <Row>
-        <Col md="7">
+        <Col md="7" lg="7">
           <Image src="images/product/5_s.jpg" alt="Delivery" />
         </Col>
-        <Col md="5">
-          <Title>Delivery</Title>
-          <Feature>
-            <FeatureTitle>Free Next Day Delivery</FeatureTitle>
-            <FeatureText className="delivery-feauture__text">
-              Order before 7pm Monday to Thursday for delivery the next day
-            </FeatureText>
-          </Feature>
-          <Feature>
-            <FeatureTitle>Collect-in-Store</FeatureTitle>
-            <FeatureText>
-              Order online today and pick up your items in store as early as
-              tomorrow
-            </FeatureText>
-          </Feature>
-          <Feature>
-            <FeatureTitle>Free Returns</FeatureTitle>
-            <FeatureText>Enjoy free returns on your order</FeatureText>
-          </Feature>
-          <Feature>
-            <FeatureTitle>Free Gift Packaging</FeatureTitle>
-            <FeatureText>
-              Discover our gift packaging, a gold lined box tied with a coloured
-              ribbon
-            </FeatureText>
-          </Feature>
+        <Col md="5" lg="5">
+          <Wrapper>
+            <Title>Delivery</Title>
+            <Feature>
+              <FeatureTitle>Free Next Day Delivery</FeatureTitle>
+              <FeatureText className="delivery-feauture__text">
+                Order before 7pm Monday to Thursday for delivery the next day
+              </FeatureText>
+            </Feature>
+            <Feature>
+              <FeatureTitle>Collect-in-Store</FeatureTitle>
+              <FeatureText>
+                Order online today and pick up your items in store as early as
+                tomorrow
+              </FeatureText>
+            </Feature>
+            <Feature>
+              <FeatureTitle>Free Returns</FeatureTitle>
+              <FeatureText>Enjoy free returns on your order</FeatureText>
+            </Feature>
+            <Feature>
+              <FeatureTitle>Free Gift Packaging</FeatureTitle>
+              <FeatureText>
+                Discover our gift packaging, a gold lined box tied with a
+                coloured ribbon
+              </FeatureText>
+            </Feature>
+          </Wrapper>
         </Col>
       </Row>
     </Delivery>

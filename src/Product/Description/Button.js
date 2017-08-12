@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { LG } from "../../common/Responsive";
+import Col from "../../common/Col";
+import Row from "../../common/Row";
 import triangle from "../../assets/icons/triangle.svg";
 
 export const Button = styled.button`
@@ -11,6 +14,14 @@ export const Button = styled.button`
   @media screen and (min-width: 48rem) {
     border-bottom: 0;
   }
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 4rem;
+  }
+`;
+
+export const Img = styled.img`
+  display: block;
+  width: 100%;
 `;
 
 export const Title = styled.h2`
@@ -68,6 +79,10 @@ export const Content = styled.div`
   ul li {
     font-family: 'Lora', 'Arial', serif;
   }
+  ${"" /* @media screen and (min-width: 62rem) {
+    max-width: 315px;
+    display: inline-block;
+  } */};
 `;
 
 class ToggleButton extends Component {
@@ -83,40 +98,54 @@ class ToggleButton extends Component {
     this.setState((state, props) => ({
       active: !state.active
     }));
-    console.log("Hello");
   }
   render() {
     return (
       <Button type="button">
-        <Title onClick={this.toggle} active={this.state.active}>
-          {this.props.title}
-        </Title>
-        <Content active={this.state.active}>
-          <p>A refined car coat crafted in protective cotton gabardine.</p>
-          <p>
-            Invented by Thomas Burberry in 1879, cotton gabardine is a tightly
-            woven and breathable fabric that protects against wind and rain.
-          </p>
-          <p>
-            Raglan sleeves and a concealed button closure complement the clean
-            tailored lines.
-          </p>
-          <p>The piece is finished with a distinctive check undercollar.</p>
-          <br />
-          <ul>
-            <li>
-              Coat length: 98cm/38.6in. This is based on a size UK 48 as
-              proportions change slightly according to size.
-            </li>
-            <li>Outer: 100% cotton</li>
-            <li>Check lining: 100% cotton</li>
-            <li>Sleeve lining: 100% viscose</li>
-            <li>Buttons: buffalo horn</li>
-            <li>Specialist dry clean</li>
-            <li>Made in Europe</li>
-            <li>Item 39428531</li>
-          </ul>
-        </Content>
+        <Row>
+          <Col xs="12" md="12" lg="4">
+            <Title onClick={this.toggle} active={this.state.active}>
+              {this.props.title}
+            </Title>
+            <Content active={this.state.active}>
+              <p>A refined car coat crafted in protective cotton gabardine.</p>
+              <p>
+                Invented by Thomas Burberry in 1879, cotton gabardine is a
+                tightly woven and breathable fabric that protects against wind
+                and rain.
+              </p>
+              <p>
+                Raglan sleeves and a concealed button closure complement the
+                clean tailored lines.
+              </p>
+              <p>The piece is finished with a distinctive check undercollar.</p>
+              <br />
+              <ul>
+                <li>
+                  Coat length: 98cm/38.6in. This is based on a size UK 48 as
+                  proportions change slightly according to size.
+                </li>
+                <li>Outer: 100% cotton</li>
+                <li>Check lining: 100% cotton</li>
+                <li>Sleeve lining: 100% viscose</li>
+                <li>Buttons: buffalo horn</li>
+                <li>Specialist dry clean</li>
+                <li>Made in Europe</li>
+                <li>Item 39428531</li>
+              </ul>
+            </Content>
+          </Col>
+          <LG>
+            <Col xs="12" md="12" lg="8">
+              <Img
+                active={this.state.active}
+                src="images/product/6.jpg"
+                srcSet="images/product/6@2x.jpg 2x, images/product/6@3x.jpg 3x"
+                alt="Long Cotton Gabardine Car Coat"
+              />
+            </Col>
+          </LG>
+        </Row>
       </Button>
     );
   }

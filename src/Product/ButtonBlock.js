@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../common/Button";
+import { MD } from "../common/Responsive";
 import HelpLink from "../common/HelpLink";
 
 const BtnBlock = styled.div`
@@ -13,12 +14,14 @@ const BtnBlock = styled.div`
 
 export default () => {
   return (
-    <BtnBlock>
-      <Button primary type="button">
-        SELECT A SIZE
-      </Button>
-      <Button type="button">FIND IN STORE</Button>
-      <HelpLink />
-    </BtnBlock>
+    <MD>
+      <BtnBlock>
+        <Button primary type="button">
+          SELECT A SIZE
+        </Button>
+        <Button type="button">FIND IN STORE</Button>
+        <HelpLink />
+      </BtnBlock>
+    </MD>
   );
 };
