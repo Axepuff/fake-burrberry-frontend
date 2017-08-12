@@ -13,6 +13,19 @@ class Col extends Component {
   }
 }
 
+class ColNav extends Component {
+  render() {
+    return (
+      <nav
+        className={`col-xs-${this.props.xs} col-sm-${this.props
+          .sm} col-md-${this.props.md} col-lg-${this.props.lg}`}
+      >
+        {this.props.children}
+      </nav>
+    );
+  }
+}
+
 class Container extends Component {
   render() {
     return (
@@ -33,4 +46,4 @@ class Row extends Component {
   }
 }
 
-export { Col, Container, Row };
+export { Col, Container, Row, ColNav };
