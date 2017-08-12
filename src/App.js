@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import Header from "./Header/index.js";
-import Footer from "./Footer";
-import Product from "./Product/index.js";
 import { Helmet } from "react-helmet";
-import "./App.css";
+import { IntlProvider } from "react-intl";
+import { addLocaleData } from "react-intl";
+import ruLocaleData from "react-intl/locale-data/ru";
+import Header from "./Header/";
+import Footer from "./Footer/";
+import Product from "./Product/";
 
-class App extends Component {
-  render() {
-    return (
+addLocaleData(ruLocaleData);
+
+function App() {
+  return (
+    <IntlProvider locale="ru">
       <div>
         <Helmet>
           <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
@@ -16,8 +20,8 @@ class App extends Component {
         <Product />
         <Footer />
       </div>
-    );
-  }
+    </IntlProvider>
+  );
 }
 
 export default App;

@@ -1,15 +1,15 @@
 import React from "react";
-import ToggleButton from "./Button";
-import Line from "../../common/Line";
+import Accordion from "./Accordion";
+import { Line } from "../../common/Line";
 import { XS } from "../../common/Responsive";
 
 export default () => {
   return (
     <div>
-      <ToggleButton title="DESCRIPTION" />
+      <Accordion title="DESCRIPTION" />
       <XS>
         <Line />
-        <ToggleButton title="SHIPPING & RETURNS" />
+        <Accordion title="SHIPPING & RETURNS" />
         <Line />
       </XS>
     </div>

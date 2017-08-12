@@ -12,7 +12,7 @@ const Gallery = styled.div`
 
 const Image = styled.img`
   vertical-align: top;
-  width: 100%;
+  max-width: 100%;
   height: 400px;
   @media screen and (min-width: 48rem) {
     min-width: 432px;

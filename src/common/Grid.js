@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const Col = fucntion(props) {
+class Col extends Component {
   render() {
     return (
       <div
@@ -13,7 +13,7 @@ const Col = fucntion(props) {
   }
 }
 
-const Container = fucntion(props) {
+class Container extends Component {
   render() {
     return (
       <div className="container">
@@ -23,15 +23,14 @@ const Container = fucntion(props) {
   }
 }
 
-
-const Row = fucntion(props) {
+class Row extends Component {
   render() {
     return (
-      <div className="row">
+      <div className={`row bottom-${this.props.bottom}`}>
         {this.props.children}
       </div>
     );
   }
 }
 
-export {Col, Container, Col};
+export { Col, Container, Row };

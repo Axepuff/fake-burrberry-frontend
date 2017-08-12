@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Row from "../common/Row";
-import Col from "../common/Col";
-import Line from "../common/Line";
-import Container from "../common/Container";
-import { LG } from "../common/Responsive";
-import { MD } from "../common/Responsive";
+import { Col, Container, Row } from "../common/Grid";
+import { Line } from "../common/Line";
+import { LGonly, MD } from "../common/Responsive";
 import Gallery from "./Gallery";
-import DescriptionGallery from "./DescriptionGallery";
+import Photos from "./Photos";
 import Delivery from "./Delivery";
 import Recommend from "./Recommend";
 import ButtonBlock from "./ButtonBlock";
@@ -59,20 +56,20 @@ export default () => {
               <MD>
                 <Gallery />
               </MD>
-              <LG>
+              <LGonly>
                 <ProductImage
                   src="images/product/1_s.jpg"
                   srcSet="images/product/1_m.jpg 2x, images/product/1_l.jpg 3x"
                   alt="Long Cotton Gabardine Car Coat"
                 />
-              </LG>
+              </LGonly>
             </Col>
             <Col xs="12" md="5" lg="6">
-              <LG>
+              <LGonly>
                 <Title>
                   Long Cotton Gabardine Car Coat Coat Coat Coat Coat
                 </Title>
-              </LG>
+              </LGonly>
               <Info />
               <ButtonBlock />
             </Col>
@@ -80,15 +77,16 @@ export default () => {
           <Line />
         </Container>
       </Wrapper>
-
       <Container>
         <Row>
           <Col xs="12" md="12">
             <Description />
           </Col>
-          <Col md="12">
-            <DescriptionGallery />
-          </Col>
+          <LGonly>
+            <Col md="12">
+              <Photos />
+            </Col>
+          </LGonly>
           <Col md="12">
             <Delivery />
           </Col>

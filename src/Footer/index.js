@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../common/Container";
-import Row from "../common/Row";
-import Col from "../common/Col";
+import { Col, Container, Row } from "../common/Grid";
 import Help from "../common/Help";
 
 const Footer = styled.footer`

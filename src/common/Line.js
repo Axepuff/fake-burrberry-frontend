@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Line = styled.hr`
+export const Line = styled.hr`
   right: 50%;
   left: 50%;
   position: relative;
@@ -17,7 +17,3 @@ const Line = styled.hr`
     display: none;
   }
 `;
-
-export default () => {
-  return <Line />;
-};

@@ -1,6 +1,5 @@
 import React from "react";
-import Row from "../../common/Row";
-import Col from "../../common/Col";
+import { Row, Col } from "../../common/Grid";
 import Card from "./Card";
 import More from "./More";
 import styled from "styled-components";
@@ -9,6 +8,9 @@ const Recommend = styled.section`
   padding: 3rem 0.5rem 4rem;
   @media screen and (min-width: 48rem) {
     padding: 1.5rem 0 4rem;
+  }
+  @media screen and (min-width: 48rem) {
+    padding: 4rem 0 4rem;
   }
 `;
 
@@ -56,7 +58,8 @@ export default () => {
               href="/link"
               src="images/product/small/1.jpg"
               name="Emroided Hooded Content For Three Lines"
-              price="27 000 руб."
+              price={27000}
+              currency="RUB"
             />
           </Col>
           <Col xs="6" md="3">
@@ -64,7 +67,8 @@ export default () => {
               href="/link"
               src="images/product/small/2.jpg"
               name="Relaxed Fit Stretch Jeans Content For Three Lines"
-              price="22 500 руб."
+              price={25000}
+              currency="RUB"
             />
           </Col>
           <Col xs="6" md="3">
@@ -72,7 +76,8 @@ export default () => {
               href="/link"
               src="images/product/small/3.jpg"
               name="Leather and House Check Content For Three Lines"
-              price="120 000 руб."
+              price={120000}
+              currency="RUB"
             />
           </Col>
           <Col xs="6" md="3">
@@ -80,7 +85,8 @@ export default () => {
               href="/link"
               src="images/product/small/4.jpg"
               name="Leather Wingtip Check Content For Three Lines"
-              price="46 000 руб."
+              price={46000}
+              currency="RUB"
             />
           </Col>
         </Row>

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { LG } from "../../common/Responsive";
-import Col from "../../common/Col";
-import Row from "../../common/Row";
+import { LGonly } from "../../common/Responsive";
+import { Col, Row } from "../../common/Grid";
 import triangle from "../../assets/icons/triangle.svg";
 
 export const Button = styled.button`
@@ -50,6 +49,9 @@ export const Title = styled.h2`
       display: none;
     }
   }
+  @media screen and (min-width: 62rem) {
+    padding: 0 0 1rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -79,13 +81,9 @@ export const Content = styled.div`
   ul li {
     font-family: 'Lora', 'Arial', serif;
   }
-  ${"" /* @media screen and (min-width: 62rem) {
-    max-width: 315px;
-    display: inline-block;
-  } */};
 `;
 
-class ToggleButton extends Component {
+class Accordion extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -135,7 +133,7 @@ class ToggleButton extends Component {
               </ul>
             </Content>
           </Col>
-          <LG>
+          <LGonly>
             <Col xs="12" md="12" lg="8">
               <Img
                 active={this.state.active}
@@ -144,11 +142,11 @@ class ToggleButton extends Component {
                 alt="Long Cotton Gabardine Car Coat"
               />
             </Col>
-          </LG>
+          </LGonly>
         </Row>
       </Button>
     );
   }
 }
 
-export default ToggleButton;
+export default Accordion;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Row from "../common/Row";
-import Col from "../common/Col";
+import { Row, Col } from "../common/Grid";
 
 const Delivery = styled.div`
   display: none;
@@ -33,7 +32,7 @@ const Feature = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const FeatureTitle = styled.h3`
+const SubTitle = styled.h3`
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
@@ -43,9 +42,9 @@ const FeatureTitle = styled.h3`
   line-height: 1.15;
 `;
 
-const Text = FeatureTitle.withComponent("p");
+const SubTitleP = SubTitle.withComponent("p");
 
-const FeatureText = Text.extend`
+const Text = SubTitleP.extend`
   line-height: 1.35;
   margin: 0;
   font-weight: 400;
@@ -53,7 +52,7 @@ const FeatureText = Text.extend`
 
 const Wrapper = styled.div`
   @media screen and (min-width: 62rem) {
-    padding: 4rem 0 5.125rem 5.125rem;
+    padding: 4rem 0 0 5.125rem;
   }
 `;
 
@@ -62,34 +61,38 @@ export default () => {
     <Delivery>
       <Row>
         <Col md="7" lg="7">
-          <Image src="images/product/5_s.jpg" alt="Delivery" />
+          <Image
+            src="images/product/5_s.jpg"
+            srcSet="images/product/5_m.jpg 2x, images/product/5_l.jpg 3x"
+            alt="Delivery"
+          />
         </Col>
         <Col md="5" lg="5">
           <Wrapper>
             <Title>Delivery</Title>
             <Feature>
-              <FeatureTitle>Free Next Day Delivery</FeatureTitle>
-              <FeatureText className="delivery-feauture__text">
+              <SubTitle>Free Next Day Delivery</SubTitle>
+              <Text className="delivery-feauture__text">
                 Order before 7pm Monday to Thursday for delivery the next day
-              </FeatureText>
+              </Text>
             </Feature>
             <Feature>
-              <FeatureTitle>Collect-in-Store</FeatureTitle>
-              <FeatureText>
+              <SubTitle>Collect-in-Store</SubTitle>
+              <Text>
                 Order online today and pick up your items in store as early as
                 tomorrow
-              </FeatureText>
+              </Text>
             </Feature>
             <Feature>
-              <FeatureTitle>Free Returns</FeatureTitle>
-              <FeatureText>Enjoy free returns on your order</FeatureText>
+              <SubTitle>Free Returns</SubTitle>
+              <Text>Enjoy free returns on your order</Text>
             </Feature>
             <Feature>
-              <FeatureTitle>Free Gift Packaging</FeatureTitle>
-              <FeatureText>
+              <SubTitle>Free Gift Packaging</SubTitle>
+              <Text>
                 Discover our gift packaging, a gold lined box tied with a
                 coloured ribbon
-              </FeatureText>
+              </Text>
             </Feature>
           </Wrapper>
         </Col>

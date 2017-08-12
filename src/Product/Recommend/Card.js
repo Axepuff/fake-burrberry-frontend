@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
 
 const Card = styled.a`
   display: flex;
@@ -68,7 +69,13 @@ export default function(props) {
         {props.name}
       </Title>
       <Price>
-        {props.price}
+        <FormattedNumber
+          value={props.price}
+          style="currency"
+          currency={props.currency}
+          currencyDisplay="symbol"
+          minimumFractionDigits={0}
+        />
       </Price>
     </Card>
   );
