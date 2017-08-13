@@ -1,49 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Col extends Component {
-  render() {
-    return (
-      <div
-        className={`col-xs-${this.props.xs} col-sm-${this.props
-          .sm} col-md-${this.props.md} col-lg-${this.props.lg}`}
-      >
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Col = props => {
+  return (
+    <div
+      className={`col-xs-${props.xs} col-sm-${props.sm} col-md-${props.md} col-lg-${props.lg}`}
+    >
+      {props.children}
+    </div>
+  );
+};
 
-class ColNav extends Component {
-  render() {
-    return (
-      <nav
-        className={`col-xs-${this.props.xs} col-sm-${this.props
-          .sm} col-md-${this.props.md} col-lg-${this.props.lg}`}
-      >
-        {this.props.children}
-      </nav>
-    );
-  }
-}
+const Nav = props => {
+  return (
+    <nav
+      className={`col-xs-${props.xs} col-sm-${props.sm} col-md-${props.md} col-lg-${props.lg}`}
+    >
+      {props.children}
+    </nav>
+  );
+};
 
-class Container extends Component {
-  render() {
-    return (
-      <div className="container">
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Container = props => {
+  return (
+    <div className="container">
+      {props.children}
+    </div>
+  );
+};
 
-class Row extends Component {
-  render() {
-    return (
-      <div className={`row bottom-${this.props.bottom}`}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const Row = props => {
+  return (
+    <div className={`row ${props.position}`}>
+      {props.children}
+    </div>
+  );
+};
 
-export { Col, Container, Row, ColNav };
+export { Col, Container, Row, Nav };

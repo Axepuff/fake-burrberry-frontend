@@ -42,9 +42,11 @@ const SubTitle = styled.h3`
   line-height: 1.15;
 `;
 
-const SubTitleP = SubTitle.withComponent("p");
-
-const Text = SubTitleP.extend`
+const Text = styled.p`
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #171717;
   line-height: 1.35;
   margin: 0;
   font-weight: 400;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ColNav, Container, Row } from "../common/Grid";
+import { Nav, Container, Row } from "../common/Grid";
 import Help from "../common/Help";
 
 const Footer = styled.footer`
@@ -72,7 +72,7 @@ export default function(props) {
       <Wrapper>
         <Container>
           <Row>
-            <ColNav md="3">
+            <Nav md="3">
               <Title>Customer Service</Title>
               <Link href="#">Contact Us</Link>
               <Link href="#">Payment</Link>
@@ -82,23 +82,23 @@ export default function(props) {
               <Link href="#">Live Chat</Link>
               <Link href="#">The Burberry App</Link>
               <Link href="#">Store Locator</Link>
-            </ColNav>
-            <ColNav md="3">
+            </Nav>
+            <Nav md="3">
               <Title>Our Company</Title>
               <Link href="#">Our History</Link>
               <Link href="#">Burberry Group Pic</Link>
               <Link href="#">Careers</Link>
               <Link href="#">Corporate Responsibility</Link>
               <Link href="#">Site Map</Link>
-            </ColNav>
-            <ColNav md="3">
+            </Nav>
+            <Nav md="3">
               <Title>Legal &amp; Cookies</Title>
               <Link href="#">Terms &amp; Conditions</Link>
               <Link href="#">Privacy Policy</Link>
               <Link href="#">Cookie Policy</Link>
               <Link href="#">Accessibility Statement</Link>
               <Link href="#">Japan Only - SCTL Indications</Link>
-            </ColNav>
+            </Nav>
           </Row>
           <Button>Shipping country: Russian Federation</Button>
           <Button>Language: English</Button>

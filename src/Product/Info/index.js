@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ButtonColor from "./ButtonColor";
 import Button from "../../common/Button";
 import Size from "./Size";
-import { MD, LG, LGonly } from "../../common/Responsive";
+import { MD, LGonly } from "../../common/Responsive";
 import { Col, Row } from "../../common/Grid";
 import { FormattedNumber } from "react-intl";
 
@@ -74,7 +74,7 @@ const ColorList = styled.div`display: flex;`;
 export default () => {
   return (
     <div>
-      <Row bottom="lg">
+      <Row position="bottom-lg">
         <Col xs="12" lg="6">
           <Info>
             <Price>
