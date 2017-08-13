@@ -1,2 +1,1 @@
-# fake-burrberry-frontend
-# Максим Аксенов
+Это Страница товара Burberry, рендерится с помощью React.
