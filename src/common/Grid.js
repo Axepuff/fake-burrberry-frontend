@@ -10,16 +10,6 @@ const Col = props => {
   );
 };
 
-const Nav = props => {
-  return (
-    <nav
-      className={`col-xs-${props.xs} col-sm-${props.sm} col-md-${props.md} col-lg-${props.lg}`}
-    >
-      {props.children}
-    </nav>
-  );
-};
-
 const Container = props => {
   return (
     <div className="container">
@@ -36,4 +26,4 @@ const Row = props => {
   );
 };
 
-export { Col, Container, Row, Nav };
+export { Col, Container, Row };
