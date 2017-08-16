@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
 const Card = styled.a`
   display: flex;
@@ -61,7 +61,7 @@ const Price = styled.span`
   }
 `;
 
-export default function(props) {
+export default function (props) {
   return (
     <Card href={props.href}>
       <Img alt={props.name} src={props.src} />
@@ -70,11 +70,11 @@ export default function(props) {
       </Title>
       <Price>
         <FormattedNumber
-          value={props.price}
-          style="currency"
-          currency={props.currency}
-          currencyDisplay="symbol"
-          minimumFractionDigits={0}
+          value={props.price} // eslint-disable-line
+          style="currency" // eslint-disable-line
+          currency={props.currency} // eslint-disable-line
+          currencyDisplay="symbol" // eslint-disable-line
+          minimumFractionDigits={0} // eslint-disable-line
         />
       </Price>
     </Card>

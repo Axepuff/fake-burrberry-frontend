@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../assets/logo.svg';
 
 const Logo = styled.a`
   display: flex;
@@ -19,12 +19,10 @@ const Logo = styled.a`
 
 const Image = styled.img`@media screen and (min-width: 62rem) {height: 1rem;}`;
 
-export default () => {
-  return (
-    <header>
-      <Logo href="/">
-        <Image src={logo} alt="Burberry" />
-      </Logo>
-    </header>
-  );
-};
+export default () => (
+  <header>
+    <Logo href="/">
+      <Image src={logo} alt="Burberry" />
+    </Logo>
+  </header>
+);
