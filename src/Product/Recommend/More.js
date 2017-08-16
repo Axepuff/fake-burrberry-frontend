@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const More = styled.div`@media screen and (min-width: 48rem) {display: none;}`;
 
@@ -33,13 +33,11 @@ const Link = styled.a`
   }
 `;
 
-export default () => {
-  return (
-    <More>
-      <Title>MORE FOR YOU</Title>
-      <Link href="#">Men’s Black Trench Coats</Link>
-      <Link href="#">Men’s Short Trench Coats</Link>
-      <Link href="#">Men’s Long Trench Coats</Link>
-    </More>
-  );
-};
+export default () => (
+  <More>
+    <Title>MORE FOR YOU</Title>
+    <Link href="#">Men’s Black Trench Coats</Link>
+    <Link href="#">Men’s Short Trench Coats</Link>
+    <Link href="#">Men’s Long Trench Coats</Link>
+  </More>
+);

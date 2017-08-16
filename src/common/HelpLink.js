@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const HelpLink = styled.button`
   border: 0;
@@ -13,6 +13,4 @@ const HelpLink = styled.button`
   line-height: 1.4;
 `;
 
-export default () => {
-  return <HelpLink type="button">NEED SIZE HELP?</HelpLink>;
-};
+export default () => <HelpLink type="button">NEED SIZE HELP?</HelpLink>;

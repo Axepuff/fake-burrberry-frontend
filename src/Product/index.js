@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { Col, Container, Row } from "../common/Grid";
-import { Line } from "../common/Line";
-import { LGonly, MD } from "../common/Responsive";
-import Gallery from "./Gallery";
-import Photos from "./Photos";
-import Delivery from "./Delivery";
-import Recommend from "./Recommend";
-import ButtonBlock from "./ButtonBlock";
-import Description from "./Description/index.js";
-import Info from "./Info";
+import React from 'react';
+import styled from 'styled-components';
+import { Col, Container, Row } from '../common/Grid';
+import Line from '../common/Line';
+import { LGonly, MD } from '../common/Responsive';
+import Gallery from './Gallery';
+import Photos from './Photos';
+import Delivery from './Delivery';
+import Recommend from './Recommend';
+import ButtonBlock from './ButtonBlock';
+import Description from './Description/';
+import Info from './Info';
 
 const Product = styled.main`@media screen and (min-width: 48rem) {margin: 0;}`;
 const Title = styled.h1`
@@ -43,56 +43,51 @@ const ProductImage = styled.img`
   width: 100%;
 `;
 
-export default () => {
-  return (
-    <Product>
-      <Wrapper>
-        <Container>
-          <MD>
-            <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-          </MD>
-          <Row>
-            <Col xs="12" md="7" lg="6">
-              <MD>
-                <Gallery />
-              </MD>
-              <LGonly>
-                <ProductImage
-                  src="images/product/1_s.jpg"
-                  srcSet="images/product/1_m.jpg 2x, images/product/1_l.jpg 3x"
-                  alt="Long Cotton Gabardine Car Coat"
-                />
-              </LGonly>
-            </Col>
-            <Col xs="12" md="5" lg="6">
-              <LGonly>
-                <Title>
-                  Long Cotton Gabardine Car Coat Coat Coat Coat Coat
-                </Title>
-              </LGonly>
-              <Info />
-              <ButtonBlock />
-            </Col>
-          </Row>
-          <Line />
-        </Container>
-      </Wrapper>
+export default () =>
+  (<Product>
+    <Wrapper>
       <Container>
+        <MD>
+          <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+        </MD>
         <Row>
-          <Col xs="12" md="12">
-            <Description />
+          <Col xs="12" md="7" lg="6">
+            <MD>
+              <Gallery />
+            </MD>
+            <LGonly>
+              <ProductImage
+                src="images/product/1_s.jpg"
+                srcSet="images/product/1_m.jpg 2x, images/product/1_l.jpg 3x"
+                alt="Long Cotton Gabardine Car Coat"
+              />
+            </LGonly>
           </Col>
-          <LGonly>
-            <Col md="12">
-              <Photos />
-            </Col>
-          </LGonly>
-          <Col md="12">
-            <Delivery />
+          <Col xs="12" md="5" lg="6">
+            <LGonly>
+              <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
+            </LGonly>
+            <Info />
+            <ButtonBlock />
           </Col>
         </Row>
-        <Recommend />
+        <Line />
       </Container>
-    </Product>
-  );
-};
+    </Wrapper>
+    <Container>
+      <Row>
+        <Col xs="12" md="12">
+          <Description />
+        </Col>
+        <LGonly>
+          <Col md="12">
+            <Photos />
+          </Col>
+        </LGonly>
+        <Col md="12">
+          <Delivery />
+        </Col>
+      </Row>
+      <Recommend />
+    </Container>
+  </Product>);

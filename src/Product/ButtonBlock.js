@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../common/Button";
-import { MD } from "../common/Responsive";
-import HelpLink from "../common/HelpLink";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../common/Button';
+import { MD } from '../common/Responsive';
+import HelpLink from '../common/HelpLink';
 
 const BtnBlock = styled.div`
   padding: 2rem 0.5rem 3rem;
@@ -12,16 +12,14 @@ const BtnBlock = styled.div`
   }
 `;
 
-export default () => {
-  return (
-    <MD>
-      <BtnBlock>
-        <Button primary type="button">
+export default () => (
+  <MD>
+    <BtnBlock>
+      <Button primary type="button">
           SELECT A SIZE
-        </Button>
-        <Button type="button">FIND IN STORE</Button>
-        <HelpLink />
-      </BtnBlock>
-    </MD>
-  );
-};
+      </Button>
+      <Button type="button">FIND IN STORE</Button>
+      <HelpLink />
+    </BtnBlock>
+  </MD>
+);
