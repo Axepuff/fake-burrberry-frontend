@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import HelpLink from "../../common/HelpLink";
-import Button from "../../common/Button";
+import React from 'react';
+import styled from 'styled-components';
+import HelpLink from '../../common/HelpLink';
+import Button from '../../common/Button';
 
 const Container = styled.div`margin-bottom: 2rem;`;
 
@@ -25,21 +25,19 @@ const Buttons = styled.div`
   padding-top: 1rem;
 `;
 
-export default () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Size>
+export default () => (
+  <Container>
+    <Wrapper>
+      <Size>
           Size: <SizeValue>XL</SizeValue>
-        </Size>
-        <HelpLink />
-      </Wrapper>
-      <Buttons>
-        <Button small>S</Button>
-        <Button small>M</Button>
-        <Button small>L</Button>
-        <Button small>XL</Button>
-      </Buttons>
-    </Container>
-  );
-};
+      </Size>
+      <HelpLink />
+    </Wrapper>
+    <Buttons>
+      <Button small>S</Button>
+      <Button small>M</Button>
+      <Button small>L</Button>
+      <Button small>XL</Button>
+    </Buttons>
+  </Container>
+);

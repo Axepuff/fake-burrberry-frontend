@@ -1,8 +1,8 @@
-import React from "react";
-import { Row, Col } from "../../common/Grid";
-import Card from "./Card";
-import More from "./More";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import Card from './Card';
+import More from './More';
+import { Row, Col } from '../../common/Grid';
 
 const Recommend = styled.section`
   padding: 3rem 0.5rem 4rem;
@@ -47,51 +47,48 @@ const Title = styled.h2`
   }
 `;
 
-export default () => {
-  return (
-    <Recommend>
-      <Title>WE RECOMMEND</Title>
-      <Wrapper>
-        <Row>
-          <Col xs="6" md="3">
-            <Card
-              href="/link"
-              src="images/product/small/1.jpg"
-              name="Emroided Hooded Content For Three Lines"
-              price={27000}
-              currency="RUB"
-            />
-          </Col>
-          <Col xs="6" md="3">
-            <Card
-              href="/link"
-              src="images/product/small/2.jpg"
-              name="Relaxed Fit Stretch Jeans Content For Three Lines"
-              price={25000}
-              currency="RUB"
-            />
-          </Col>
-          <Col xs="6" md="3">
-            <Card
-              href="/link"
-              src="images/product/small/3.jpg"
-              name="Leather and House Check Content For Three Lines"
-              price={120000}
-              currency="RUB"
-            />
-          </Col>
-          <Col xs="6" md="3">
-            <Card
-              href="/link"
-              src="images/product/small/4.jpg"
-              name="Leather Wingtip Check Content For Three Lines"
-              price={46000}
-              currency="RUB"
-            />
-          </Col>
-        </Row>
-      </Wrapper>
-      <More />
-    </Recommend>
-  );
-};
+export default () =>
+  (<Recommend>
+    <Title>WE RECOMMEND</Title>
+    <Wrapper>
+      <Row>
+        <Col xs="6" md="3">
+          <Card
+            href="/link"
+            src="images/product/small/1.jpg"
+            name="Emroided Hooded Content For Three Lines"
+            price={27000}
+            currency="RUB"
+          />
+        </Col>
+        <Col xs="6" md="3">
+          <Card
+            href="/link"
+            src="images/product/small/2.jpg"
+            name="Relaxed Fit Stretch Jeans Content For Three Lines"
+            price={25000}
+            currency="RUB"
+          />
+        </Col>
+        <Col xs="6" md="3">
+          <Card
+            href="/link"
+            src="images/product/small/3.jpg"
+            name="Leather and House Check Content For Three Lines"
+            price={120000}
+            currency="RUB"
+          />
+        </Col>
+        <Col xs="6" md="3">
+          <Card
+            href="/link"
+            src="images/product/small/4.jpg"
+            name="Leather Wingtip Check Content For Three Lines"
+            price={46000}
+            currency="RUB"
+          />
+        </Col>
+      </Row>
+    </Wrapper>
+    <More />
+  </Recommend>);

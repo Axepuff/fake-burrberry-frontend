@@ -1,11 +1,11 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { IntlProvider } from "react-intl";
-import { addLocaleData } from "react-intl";
-import ruLocaleData from "react-intl/locale-data/ru";
-import Header from "./Header/";
-import Footer from "./Footer/";
-import Product from "./Product/";
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { addLocaleData, IntlProvider } from 'react-intl';
+import ruLocaleData from 'react-intl/locale-data/ru';
+import Header from './Header/';
+import Footer from './Footer/';
+import Product from './Product/';
 
 addLocaleData(ruLocaleData);
 

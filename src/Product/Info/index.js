@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import ButtonColor from "./ButtonColor";
-import Button from "../../common/Button";
-import Size from "./Size";
-import { MD, LGonly } from "../../common/Responsive";
-import { Col, Row } from "../../common/Grid";
-import { FormattedNumber } from "react-intl";
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import Button from '../../common/Button';
+import { MD, LGonly } from '../../common/Responsive';
+import { Col, Row } from '../../common/Grid';
+import Size from './Size';
+import ButtonColor from './ButtonColor';
 
 const Info = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ const TextTitle = styled.h3`
   padding: 0.4rem 0;
 `;
 
-const TextP = TextTitle.withComponent("p");
+const TextP = TextTitle.withComponent('p');
 
 const Text = TextP.extend`
   padding: 0;
@@ -71,51 +71,46 @@ const Text = TextP.extend`
 
 const ColorList = styled.div`display: flex;`;
 
-export default () => {
-  return (
-    <div>
-      <Row position="bottom-lg">
-        <Col xs="12" lg="6">
-          <Info>
-            <Price>
-              <FormattedNumber
-                value="110000"
-                style="currency"
-                currency="rub"
-                currencyDisplay="symbol"
-                minimumFractionDigits={0}
-              />
-            </Price>
-            <MD>
-              <Article>Item 39428531</Article>
-            </MD>
-            <Color>
-              Colour: <ColorValue>Honey</ColorValue>
-            </Color>
-            <ColorList>
-              <ButtonColor value="#232122" name="black" />
-              <ButtonColor value="#cfa880" name="honey" />
-            </ColorList>
-          </Info>
-          <LGonly>
-            <Button primary type="button">
-              Add to bag
-            </Button>
-          </LGonly>
-        </Col>
+export default () =>
+  (<div>
+    <Row position="bottom-lg">
+      <Col xs="12" lg="6">
+        <Info>
+          <Price>
+            <FormattedNumber // eslint-disable-line
+              value="110000" // eslint-disable-line
+              style="currency" // eslint-disable-line
+              currency="rub" // eslint-disable-line
+              currencyDisplay="symbol" // eslint-disable-line
+              minimumFractionDigits={0} // eslint-disable-line
+            />
+          </Price>
+          <MD>
+            <Article>Item 39428531</Article>
+          </MD>
+          <Color>
+            Colour: <ColorValue>Honey</ColorValue>
+          </Color>
+          <ColorList>
+            <ButtonColor value="#232122" name="black" />
+            <ButtonColor value="#cfa880" name="honey" />
+          </ColorList>
+        </Info>
         <LGonly>
-          <Col lg="6">
-            <Size />
-            <Button type="button">Find in store</Button>
-          </Col>
+          <Button primary type="button">
+            Add to bag
+          </Button>
         </LGonly>
-      </Row>
+      </Col>
       <LGonly>
-        <TextTitle>Free Next Day Delivery</TextTitle>
-        <Text>
-          Order before 7pm Monday to Thursday for delivery the next day
-        </Text>
+        <Col lg="6">
+          <Size />
+          <Button type="button">Find in store</Button>
+        </Col>
       </LGonly>
-    </div>
-  );
-};
+    </Row>
+    <LGonly>
+      <TextTitle>Free Next Day Delivery</TextTitle>
+      <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+    </LGonly>
+  </div>);
