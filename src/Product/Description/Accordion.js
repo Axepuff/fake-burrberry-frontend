@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { LGonly } from "../../common/Responsive";
-import { Col, Row } from "../../common/Grid";
-import triangle from "../../assets/icons/triangle.svg";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { LGonly } from '../../common/Responsive';
+import { Col, Row } from '../../common/Grid';
+import triangle from '../../assets/icons/triangle.svg';
 
 export const Button = styled.button`
   width: 100%;
@@ -41,7 +41,7 @@ export const Title = styled.h2`
     height: 20px;
     top: 2rem;
     right: 1rem;
-    ${props => (props.active ? "transform: rotate(180deg);" : "")};
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
   }
   @media screen and (min-width: 48rem) {
     padding: 1.5rem 0rem 1rem;
@@ -57,7 +57,7 @@ export const Title = styled.h2`
 export const Content = styled.div`
   text-align: left;
   padding: 0 0.5rem 2rem;
-  display: ${props => (props.active ? `block` : "none")};
+  display: ${props => (props.active ? 'block' : 'none')};
   @media screen and (min-width: 48rem) {
     display: block;
     padding: 0 0 1.5rem;
@@ -84,17 +84,17 @@ export const Content = styled.div`
 `;
 
 class Accordion extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
-      active: false
+      active: false,
     };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    this.setState((state, props) => ({
-      active: !state.active
+    this.setState(state => ({
+      active: !state.active,
     }));
   }
   render() {
@@ -108,20 +108,18 @@ class Accordion extends Component {
             <Content active={this.state.active}>
               <p>A refined car coat crafted in protective cotton gabardine.</p>
               <p>
-                Invented by Thomas Burberry in 1879, cotton gabardine is a
-                tightly woven and breathable fabric that protects against wind
-                and rain.
+                Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and
+                breathable fabric that protects against wind and rain.
               </p>
               <p>
-                Raglan sleeves and a concealed button closure complement the
-                clean tailored lines.
+                Raglan sleeves and a concealed button closure complement the clean tailored lines.
               </p>
               <p>The piece is finished with a distinctive check undercollar.</p>
               <br />
               <ul>
                 <li>
-                  Coat length: 98cm/38.6in. This is based on a size UK 48 as
-                  proportions change slightly according to size.
+                  Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+                  slightly according to size.
                 </li>
                 <li>Outer: 100% cotton</li>
                 <li>Check lining: 100% cotton</li>
