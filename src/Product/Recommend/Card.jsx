@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
 const Card = styled.a`
@@ -61,7 +62,7 @@ const Price = styled.span`
   }
 `;
 
-export default function (props) {
+function ProductCard(props) {
   return (
     <Card href={props.href}>
       <Img alt={props.name} src={props.src} />
@@ -70,13 +71,21 @@ export default function (props) {
       </Title>
       <Price>
         <FormattedNumber
-          value={props.price} // eslint-disable-line
+          value={props.price}
           style="currency" // eslint-disable-line
-          currency={props.currency} // eslint-disable-line
-          currencyDisplay="symbol" // eslint-disable-line
-          minimumFractionDigits={0} // eslint-disable-line
+          currency={props.currency}
+          currencyDisplay="symbol"
+          minimumFractionDigits={0}
         />
       </Price>
     </Card>
   );
 }
+ProductCard.propTypes = {
+  href: PropTypes.element.isRequired,
+  name: PropTypes.element.isRequired,
+  src: PropTypes.element.isRequired,
+  price: PropTypes.element.isRequired,
+  currency: PropTypes.element.isRequired,
+};
+export default ProductCard;

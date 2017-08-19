@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { LGonly } from '../../common/Responsive';
 import { Col, Row } from '../../common/Grid';
@@ -146,5 +147,9 @@ class Accordion extends Component {
     );
   }
 }
+
+Accordion.propTypes = {
+  title: PropTypes.element.isRequired,
+};
 
 export default Accordion;
