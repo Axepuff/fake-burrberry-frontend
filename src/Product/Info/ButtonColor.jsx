@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Button = styled.button`
   margin-right: 1rem;
@@ -7,22 +8,22 @@ const Button = styled.button`
   height: 40px;
   font-size: 0;
   border-radius: 50%;
-  border: ${props => (props.active ? "solid 1px #232122" : "none")};
+  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
   background-color: ${props => props.value};
 `;
 
 class ButtonColor extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
-      active: false
+      active: false,
     };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    this.setState((state, props) => ({
-      active: !state.active
+    this.setState(state => ({
+      active: !state.active,
     }));
   }
   render() {
@@ -38,4 +39,10 @@ class ButtonColor extends Component {
     );
   }
 }
+
+ButtonColor.propTypes = {
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
 export default ButtonColor;

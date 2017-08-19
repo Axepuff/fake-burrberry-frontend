@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Col, Container, Row } from "../common/Grid";
-import Help from "../common/Help";
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import styled from 'styled-components';
+import { Col, Container, Row } from '../common/Grid';
+import Help from '../common/Help';
 
 const Footer = styled.footer`
   padding: 2rem 0.5rem 2rem;
@@ -66,7 +67,7 @@ const Link = styled.a`
   }
 `;
 
-export default function(props) {
+export default function () {
   return (
     <Footer>
       <Wrapper>
