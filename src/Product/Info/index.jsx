@@ -77,12 +77,12 @@ export default () =>
       <Col xs="12" lg="6">
         <Info>
           <Price>
-            <FormattedNumber // eslint-disable-line
-              value="110000" // eslint-disable-line
+            <FormattedNumber
+              value="110000"
               style="currency" // eslint-disable-line
-              currency="rub" // eslint-disable-line
-              currencyDisplay="symbol" // eslint-disable-line
-              minimumFractionDigits={0} // eslint-disable-line
+              currency="rub"
+              currencyDisplay="symbol"
+              minimumFractionDigits={0}
             />
           </Price>
           <MD>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -38,4 +39,10 @@ class ButtonColor extends Component {
     );
   }
 }
+
+ButtonColor.propTypes = {
+  value: PropTypes.element.isRequired,
+  name: PropTypes.element.isRequired,
+};
+
 export default ButtonColor;
