@@ -149,7 +149,7 @@ class Accordion extends Component {
 }
 
 Accordion.propTypes = {
-  title: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Accordion;

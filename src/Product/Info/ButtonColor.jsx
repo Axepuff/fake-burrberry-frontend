@@ -41,8 +41,8 @@ class ButtonColor extends Component {
 }
 
 ButtonColor.propTypes = {
-  value: PropTypes.element.isRequired,
-  name: PropTypes.element.isRequired,
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default ButtonColor;
