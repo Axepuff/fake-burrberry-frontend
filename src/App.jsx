@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint no-undef: 0 */
+=======
+>>>>>>> feat/eslint_travis
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { addLocaleData, IntlProvider } from 'react-intl';

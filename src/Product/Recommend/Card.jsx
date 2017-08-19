@@ -82,10 +82,18 @@ function ProductCard(props) {
   );
 }
 ProductCard.propTypes = {
+<<<<<<< HEAD
   href: PropTypes.element.isRequired,
   name: PropTypes.element.isRequired,
   src: PropTypes.element.isRequired,
   price: PropTypes.element.isRequired,
   currency: PropTypes.element.isRequired,
+=======
+  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+>>>>>>> feat/eslint_travis
 };
 export default ProductCard;

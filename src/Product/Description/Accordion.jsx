@@ -149,7 +149,11 @@ class Accordion extends Component {
 }
 
 Accordion.propTypes = {
+<<<<<<< HEAD
   title: PropTypes.element.isRequired,
+=======
+  title: PropTypes.string.isRequired,
+>>>>>>> feat/eslint_travis
 };
 
 export default Accordion;
