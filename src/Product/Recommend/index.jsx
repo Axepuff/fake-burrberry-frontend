@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from './Card';
+import Card from '../../common/Card';
 import More from './More';
 import { Row, Col } from '../../common/Grid';
 

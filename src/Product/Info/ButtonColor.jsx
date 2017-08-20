@@ -41,13 +41,8 @@ class ButtonColor extends Component {
 }
 
 ButtonColor.propTypes = {
-<<<<<<< HEAD
-  value: PropTypes.element.isRequired,
-  name: PropTypes.element.isRequired,
-=======
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
->>>>>>> feat/eslint_travis
 };
 
 export default ButtonColor;

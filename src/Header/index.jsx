@@ -1,28 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../assets/logo.svg';
+import arrow from '../assets/icons/arrow.svg';
+import { XS, XSonly } from '../common/Responsive';
+import { Col, Container, Row, Box } from '../common/Grid';
+import Tabs from '../common/Tabs';
+import Button from './Button';
+import Logo from './Logo';
 
-const Logo = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: solid 1px #c6c6c6;
-  padding: 1rem 0;
-  @media screen and (min-width: 48rem) {
-    padding: 1.5rem 0;
-  }
-  padding: 1rem 0;
-  @media screen and (min-width: 62rem) {
-    padding: 2rem 0;
+const ButtonCity = styled.button`
+  padding: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  line-height: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #999;
+  ::after {
+    margin-left: .5rem;
+    content: url(${arrow});
   }
 `;
 
-const Image = styled.img`@media screen and (min-width: 62rem) {height: 1rem;}`;
-
-export default () => (
-  <header>
-    <Logo href="/">
-      <Image src={logo} alt="Burberry" />
-    </Logo>
-  </header>
-);
+export default () =>
+  (<Container>
+    <Row position="start-xs middle-xs">
+      <Col xs="1" md="4">
+        <XS>
+          <Button />
+        </XS>
+        <XSonly>
+          <ButtonCity>Shopping in: United Kingdom (£)</ButtonCity>
+        </XSonly>
+      </Col>
+      <Col xs="10" md="4">
+        <Box>
+          <Row position="center-xs">
+            <Col xs="12">
+              <Logo />
+            </Col>
+          </Row>
+        </Box>
+      </Col>
+    </Row>
+    <div className="row center-xs">
+      <XSonly>
+        <Tabs />
+      </XSonly>
+    </div>
+  </Container>);

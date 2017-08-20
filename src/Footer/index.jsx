@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 import { Col, Container, Row } from '../common/Grid';
+import { LGonly } from '../common/Responsive';
 import Help from '../common/Help';
 
 const Footer = styled.footer`
@@ -34,7 +36,9 @@ const Button = styled.button`
     margin-right: 1.5rem;
   }
   @media screen and (min-width: 62rem) {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+    line-height: 1;
   }
 `;
 
@@ -65,6 +69,29 @@ const Link = styled.a`
   @media screen and (min-width: 48rem) {
     display: block;
   }
+`;
+
+const StorePhoto = styled.img`
+  width: 232px;
+  height: 154px;
+  margin-top: 2rem;
+  vertical-align: middle;
+`;
+
+const StoreLink = styled(RouterLink)`
+  display: inline-block;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: #171717;
+  text-decoration: none;
+  border-bottom: solid 1px #171717;
+`;
+
+const SelectedText = styled.span`
+  font-weight: 500;
+  color: #171717;
 `;
 
 export default function () {
@@ -106,9 +133,22 @@ export default function () {
                 <Link href="#">Japan Only - SCTL Indications</Link>
               </nav>
             </Col>
+            <LGonly>
+              <Col lg="3">
+                <StorePhoto
+                  src={`${process.env.PUBLIC_URL}/images/store.jpg`}
+                  alt="Store interior"
+                />
+                <StoreLink to="">Find a store</StoreLink>
+              </Col>
+            </LGonly>
           </Row>
-          <Button>Shipping country: Russian Federation</Button>
-          <Button>Language: English</Button>
+          <Button>
+            Shipping country: <SelectedText>Russian Federation</SelectedText>
+          </Button>
+          <Button>
+            Language: <SelectedText>English</SelectedText>
+          </Button>
           <Help />
         </Container>
       </Wrapper>

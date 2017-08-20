@@ -16,21 +16,30 @@ const Row = props =>
     {props.children}
   </div>);
 
+const Box = props =>
+  (<div className="box">
+    {props.children}
+  </div>);
+
 Col.propTypes = {
-  children: PropTypes.element.isRequired,
-  xs: PropTypes.element.isRequired,
-  sm: PropTypes.element.isRequired,
-  md: PropTypes.element.isRequired,
-  lg: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
+  xs: PropTypes.string.isRequired,
+  sm: PropTypes.string.isRequired,
+  md: PropTypes.string.isRequired,
+  lg: PropTypes.string.isRequired,
 };
 
 Container.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-Row.propTypes = {
-  children: PropTypes.element.isRequired,
-  position: PropTypes.element.isRequired,
+Box.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
-export { Col, Container, Row };
+Row.propTypes = {
+  children: PropTypes.node.isRequired,
+  position: PropTypes.node.isRequired,
+};
+
+export { Col, Container, Row, Box };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { Col, Container, Row } from '../common/Grid';
-import Line from '../common/Line';
 import { LGonly, MD } from '../common/Responsive';
 import Gallery from './Gallery';
 import Photos from './Photos';
@@ -45,6 +45,7 @@ const ProductImage = styled.img`
 
 export default () =>
   (<Product>
+    <Helmet>Long Cotton Gabardine Car Coat</Helmet>
     <Wrapper>
       <Container>
         <MD>
@@ -71,7 +72,6 @@ export default () =>
             <ButtonBlock />
           </Col>
         </Row>
-        <Line />
       </Container>
     </Wrapper>
     <Container>

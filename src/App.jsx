@@ -1,28 +1,28 @@
-<<<<<<< HEAD
-/* eslint no-undef: 0 */
-=======
->>>>>>> feat/eslint_travis
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header/';
 import Footer from './Footer/';
 import Product from './Product/';
+import Catalog from './Catalog/';
 
 addLocaleData(ruLocaleData);
 
 function App() {
   return (
     <IntlProvider locale="ru">
-      <div>
-        <Helmet>
-          <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-        </Helmet>
-        <Header />
-        <Product />
-        <Footer />
-      </div>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/:category" component={Catalog} />
+            <Route path="/:category/:id" component={Product} />
+            <Redirect from="/" to="/men/" />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     </IntlProvider>
   );
 }
