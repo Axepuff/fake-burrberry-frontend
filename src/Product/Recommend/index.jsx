@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../../common/Card';
+import Card from '..//Card';
 import More from './More';
 import { Row, Col } from '../../common/Grid';
 
@@ -48,7 +48,7 @@ const Title = styled.h2`
 `;
 
 export default () =>
-  (<Recommend>
+  <Recommend>
     <Title>WE RECOMMEND</Title>
     <Wrapper>
       <Row>
@@ -91,4 +91,4 @@ export default () =>
       </Row>
     </Wrapper>
     <More />
-  </Recommend>);
+  </Recommend>;

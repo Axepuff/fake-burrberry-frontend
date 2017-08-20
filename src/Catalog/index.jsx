@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { XSonly, XS, MDonly } from '../common/Responsive';
+import { XSonly, XS } from '../common/Responsive';
 import { Col, Container, Row } from '../common/Grid';
-import Line from '../common/Line';
-import Card from '../common/Card';
+import Card from '../Product/Card';
 import CatalogHeader from './CatalogHeader';
 import ShowMore from './More';
 import Filter from './Filter';
@@ -21,6 +20,12 @@ const SectionTitle = styled.h3`
     font-size: 1.25rem;
     padding: 4rem 0 2rem;
   }
+`;
+
+const Line = styled.hr`
+  height: 1px;
+  background-color: #c6c6c6;
+  border: none;
 `;
 
 const heritageTrenchCoats = [
@@ -199,7 +204,7 @@ const singleBreastedTrenchCoats = [
 ];
 
 export default () =>
-  (<section>
+  <section>
     <CatalogHeader />
     <Filter />
     <Container>
@@ -211,7 +216,7 @@ export default () =>
         <XS>
           <Row>
             {heritageTrenchCoats.slice(0, 4).map(product =>
-              (<Col xs="6" md="3" key={product.id}>
+              <Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -222,15 +227,14 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>),
+              </Col>,
             )}
-            <ShowMore currentlyShownCards={8} totalCards={17} />
           </Row>
         </XS>
         <XSonly>
           <Row>
             {heritageTrenchCoats.map(product =>
-              (<Col xs="6" md="3" key={product.id}>
+              <Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -241,19 +245,18 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>),
+              </Col>,
             )}
-            <ShowMore currentlyShownCards={8} totalCards={17} />
           </Row>
         </XSonly>
-        <MDonly>
+        <XSonly>
           <Line />
-        </MDonly>
-        <SectionTitle>singleBreastedTrenchCoats</SectionTitle>
+        </XSonly>
+        <SectionTitle>Single Breasted Trench Coats</SectionTitle>
         <XS>
           <Row>
             {singleBreastedTrenchCoats.slice(0, 4).map(product =>
-              (<Col xs="6" md="3" key={product.id}>
+              <Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -264,15 +267,14 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>),
+              </Col>,
             )}
-            <ShowMore currentlyShownCards={8} totalCards={17} />
           </Row>
         </XS>
         <XSonly>
           <Row>
             {singleBreastedTrenchCoats.map(product =>
-              (<Col xs="6" md="3" key={product.id}>
+              <Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -283,11 +285,11 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>),
+              </Col>,
             )}
-            <ShowMore currentlyShownCards={8} totalCards={17} />
           </Row>
         </XSonly>
       </div>
+      <ShowMore currentlyShownCards={8} totalCards={17} />
     </Container>
-  </section>);
+  </section>;

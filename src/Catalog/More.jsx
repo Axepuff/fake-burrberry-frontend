@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../common/Button';
 
-const More = styled.div`margin: 0 auto 5rem;`;
+const Wrapper = styled.div`text-align: center;`;
+const More = styled.div`
+  display: inline-block;
+  margin: 0 auto 5rem;
+`;
 
 const CurrentlyShown = styled.h3`
   margin-top: 3rem;
@@ -27,14 +31,16 @@ const ViewMore = styled(Button)`
 `;
 
 const ShowMore = props =>
-  (<More>
-    <CurrentlyShown>
-      Showing {props.currentlyShownCards} of {props.totalCards}
-    </CurrentlyShown>
-    <ViewMore>
-      View {props.totalCards - props.currentlyShownCards} more
-    </ViewMore>
-  </More>);
+  <Wrapper>
+    <More>
+      <CurrentlyShown>
+        Showing {props.currentlyShownCards} of {props.totalCards}
+      </CurrentlyShown>
+      <ViewMore>
+        View {props.totalCards - props.currentlyShownCards} more
+      </ViewMore>
+    </More>
+  </Wrapper>;
 
 ShowMore.propTypes = {
   currentlyShownCards: PropTypes.number.isRequired,

@@ -4,11 +4,11 @@ import Line from '../../common/Line';
 import { XS } from '../../common/Responsive';
 
 export default () =>
-  (<div>
+  <div>
     <Accordion title="DESCRIPTION" />
     <XS>
       <Line />
       <Accordion title="SHIPPING & RETURNS" />
       <Line />
     </XS>
-  </div>);
+  </div>;

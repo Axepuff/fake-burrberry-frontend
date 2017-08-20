@@ -43,18 +43,18 @@ const TextLink = styled(Link)`
 `;
 
 export default () =>
-  (<CatalogHeader>
+  <CatalogHeader>
     <Container>
       <Row>
         <Col xs="11" md="9" lg="7">
           <Title>Men’s Clothing</Title>
           <Text>
-            Explore our menswear collection for the season. Sculptural knitwear,
+            Explore our menswear collection for the season. Sculptural knitwear,{' '}
             <TextLink to="/">sweatshirts</TextLink>, artist overalls and oversized cabans feature
-            alongside our signature trench coat in both heritage and seasonal.
+            alongside our signature trench coat in both heritage and seasonal.{' '}
             <TextLink to="/">More</TextLink>
           </Text>
         </Col>
       </Row>
     </Container>
-  </CatalogHeader>);
+  </CatalogHeader>;
