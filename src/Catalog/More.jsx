@@ -31,7 +31,7 @@ const ViewMore = styled(Button)`
 `;
 
 const ShowMore = props =>
-  <Wrapper>
+  (<Wrapper>
     <More>
       <CurrentlyShown>
         Showing {props.currentlyShownCards} of {props.totalCards}
@@ -40,7 +40,7 @@ const ShowMore = props =>
         View {props.totalCards - props.currentlyShownCards} more
       </ViewMore>
     </More>
-  </Wrapper>;
+  </Wrapper>);
 
 ShowMore.propTypes = {
   currentlyShownCards: PropTypes.number.isRequired,

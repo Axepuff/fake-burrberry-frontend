@@ -19,7 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "lint": "eslint --ext .jsx,.js ./src",
+    "lint": "eslint --ext .jsx,.js --fix ./src",
     "eject": "react-scripts eject",
     "precommit": "yarn lint",
     "prepush": "yarn lint",

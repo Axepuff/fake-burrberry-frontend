@@ -204,7 +204,7 @@ const singleBreastedTrenchCoats = [
 ];
 
 export default () =>
-  <section>
+  (<section>
     <CatalogHeader />
     <Filter />
     <Container>
@@ -216,7 +216,7 @@ export default () =>
         <XS>
           <Row>
             {heritageTrenchCoats.slice(0, 4).map(product =>
-              <Col xs="6" md="3" key={product.id}>
+              (<Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -227,14 +227,14 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>,
+              </Col>),
             )}
           </Row>
         </XS>
         <XSonly>
           <Row>
             {heritageTrenchCoats.map(product =>
-              <Col xs="6" md="3" key={product.id}>
+              (<Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -245,7 +245,7 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>,
+              </Col>),
             )}
           </Row>
         </XSonly>
@@ -256,7 +256,7 @@ export default () =>
         <XS>
           <Row>
             {singleBreastedTrenchCoats.slice(0, 4).map(product =>
-              <Col xs="6" md="3" key={product.id}>
+              (<Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -267,14 +267,14 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>,
+              </Col>),
             )}
           </Row>
         </XS>
         <XSonly>
           <Row>
             {singleBreastedTrenchCoats.map(product =>
-              <Col xs="6" md="3" key={product.id}>
+              (<Col xs="6" md="3" key={product.id}>
                 <Card
                   to={product.to}
                   style={product.style}
@@ -285,11 +285,11 @@ export default () =>
                   value={product.value}
                   currency={product.currency}
                 />
-              </Col>,
+              </Col>),
             )}
           </Row>
         </XSonly>
       </div>
       <ShowMore currentlyShownCards={8} totalCards={17} />
     </Container>
-  </section>;
+  </section>);

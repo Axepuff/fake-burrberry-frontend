@@ -43,7 +43,7 @@ const TextLink = styled(Link)`
 `;
 
 export default () =>
-  <CatalogHeader>
+  (<CatalogHeader>
     <Container>
       <Row>
         <Col xs="11" md="9" lg="7">
@@ -57,4 +57,4 @@ export default () =>
         </Col>
       </Row>
     </Container>
-  </CatalogHeader>;
+  </CatalogHeader>);

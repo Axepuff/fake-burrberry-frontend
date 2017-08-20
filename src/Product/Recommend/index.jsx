@@ -48,7 +48,7 @@ const Title = styled.h2`
 `;
 
 export default () =>
-  <Recommend>
+  (<Recommend>
     <Title>WE RECOMMEND</Title>
     <Wrapper>
       <Row>
@@ -91,4 +91,4 @@ export default () =>
       </Row>
     </Wrapper>
     <More />
-  </Recommend>;
+  </Recommend>);
